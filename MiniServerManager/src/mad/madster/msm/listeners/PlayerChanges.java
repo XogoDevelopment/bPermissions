@@ -2,12 +2,14 @@ package mad.madster.msm.listeners;
 
 import mad.madster.msm.Main;
 
+import org.bukkit.Bukkit;
 import org.bukkit.entity.Entity;
 import org.bukkit.entity.HumanEntity;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.BlockBreakEvent;
+import org.bukkit.event.block.BlockPlaceEvent;
 import org.bukkit.event.entity.EntityDamageEvent;
 import org.bukkit.event.entity.FoodLevelChangeEvent;
 import org.bukkit.event.inventory.InventoryClickEvent;
@@ -63,6 +65,14 @@ public class PlayerChanges implements Listener {
 		}
 	}
 	
+	@EventHandler
+	public void blockPlace(BlockPlaceEvent event) {
+		Player player = event.getPlayer();
+		if(!(player.hasPermission("msm.placeblocks"))) {
+			event.setCancelled(true);
+		}
+	}
+	
 	@EventHandler 
 	public void itemMove(InventoryClickEvent event) {
 		HumanEntity he = event.getWhoClicked();
@@ -80,5 +90,7 @@ public class PlayerChanges implements Listener {
 	public void weatherChange(WeatherChangeEvent event) {
 		event.setCancelled(true);
 	}
+	
+	
 
 }

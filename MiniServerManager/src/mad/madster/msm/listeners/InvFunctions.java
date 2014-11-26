@@ -20,10 +20,22 @@ public class InvFunctions implements Listener {
 		this.plugin = plugin;
 	}
 	
+	
+	
 	@EventHandler
 	public void onPlayerUse(PlayerInteractEvent event) {
 		Player player = event.getPlayer();
 		if(event.getAction() == Action.RIGHT_CLICK_BLOCK || event.getAction() == Action.RIGHT_CLICK_AIR) {
+			
+			  if(player.getItemInHand().getType() == Material.CLAY_BALL){
+	    	PlayerVisibility.itemOnClick(player);
+	    } else if(player.getItemInHand().getType() == Material.FIREWORK_CHARGE){
+	    	PlayerVisibility.itemOnClick(player);
+	    } else if(player.getItemInHand().getType() == Material.MAGMA_CREAM){
+	    	//ServerSelector.open(player);
+	    	player.sendMessage("TEST MESSAGE");
+	    } 
+			
 			
 			
 		} if(player.getItemInHand().getType().equals(Material.GLASS)) {
