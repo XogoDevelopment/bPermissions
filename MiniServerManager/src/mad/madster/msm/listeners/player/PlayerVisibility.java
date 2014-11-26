@@ -1,4 +1,4 @@
-package mad.madster.msm.listeners;
+package mad.madster.msm.listeners.player;
 
 import java.util.ArrayList;
 

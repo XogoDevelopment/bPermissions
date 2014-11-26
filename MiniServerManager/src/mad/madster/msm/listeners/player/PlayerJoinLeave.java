@@ -1,6 +1,7 @@
-package mad.madster.msm.listeners;
+package mad.madster.msm.listeners.player;
 
 import mad.madster.msm.Main;
+import mad.madster.msm.listeners.itemAdd;
 
 import org.bukkit.ChatColor;
 import org.bukkit.GameMode;
@@ -20,7 +21,6 @@ public class PlayerJoinLeave implements Listener {
 	@EventHandler
 	  public void pJoin(PlayerJoinEvent event) {
 		  Player player = event.getPlayer();
-		  
 		  
 		  event.setJoinMessage(null);
 		  

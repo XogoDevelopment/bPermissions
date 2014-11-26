@@ -1,4 +1,4 @@
-package mad.madster.msm.listeners;
+package mad.madster.msm.listeners.player;
 
 import mad.madster.msm.Main;
 
@@ -29,7 +29,7 @@ public class PlayerChanges implements Listener {
 	public void itemPickip(PlayerPickupItemEvent event) {
 		Player player = event.getPlayer();
 		if(!(player.hasPermission("msm.iteminteract"))) {
-			event.setCancelled(true);
+			event.setCancelled(true); 
 		}
 	}
 	

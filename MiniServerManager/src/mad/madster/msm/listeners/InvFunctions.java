@@ -4,6 +4,7 @@ import java.io.ByteArrayOutputStream;
 import java.io.DataOutputStream;
 
 import mad.madster.msm.Main;
+import mad.madster.msm.listeners.player.PlayerVisibility;
 
 import org.bukkit.Material;
 import org.bukkit.entity.Player;
@@ -20,8 +21,6 @@ public class InvFunctions implements Listener {
 		this.plugin = plugin;
 	}
 	
-	
-	
 	@EventHandler
 	public void onPlayerUse(PlayerInteractEvent event) {
 		Player player = event.getPlayer();
@@ -32,16 +31,10 @@ public class InvFunctions implements Listener {
 	    } else if(player.getItemInHand().getType() == Material.FIREWORK_CHARGE){
 	    	PlayerVisibility.itemOnClick(player);
 	    } else if(player.getItemInHand().getType() == Material.MAGMA_CREAM){
-	    	//ServerSelector.open(player);
+	    	sendToServer(player, "games");
 	    	player.sendMessage("TEST MESSAGE");
-	    } 
-			
-			
-			
-		} if(player.getItemInHand().getType().equals(Material.GLASS)) {
-			player.sendMessage("Debug");
-			sendToServer(player, "games");
-		}
+	    } 	
+		} 
 	}
 	
 	

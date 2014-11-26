@@ -1,9 +1,9 @@
 package mad.madster.msm;
 
 import mad.madster.msm.listeners.InvFunctions;
-import mad.madster.msm.listeners.PlayerChanges;
-import mad.madster.msm.listeners.PlayerJoinLeave;
-import mad.madster.msm.listeners.PlayerVisibility;
+import mad.madster.msm.listeners.player.PlayerChanges;
+import mad.madster.msm.listeners.player.PlayerJoinLeave;
+import mad.madster.msm.listeners.player.PlayerVisibility;
 
 import org.bukkit.plugin.java.JavaPlugin;
 
