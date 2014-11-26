@@ -23,6 +23,7 @@ public class Pets {
 			
 			player.getInventory().remove(Material.BONE);
 			
+			
 		}
 		
 	}
